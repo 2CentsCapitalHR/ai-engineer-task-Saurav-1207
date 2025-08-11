@@ -55,21 +55,17 @@ The system uses **Retrieval-Augmented Generation (RAG)** to ensure all analysis 
 ## 📂 Folder Structure
 ```
 .
-├── app.py                 # Main application entry point
-├── checklist.json         # ADGM required documents mapping
-├── requirements.txt       # Python dependencies
-├── data/
-│   ├── reference_docs/    # ADGM reference documents
-│   ├── examples/          # Sample before/after reviewed documents
-├── utils/
-│   ├── parser.py          # Document parsing logic
-│   ├── rag_engine.py      # RAG setup and query handling
-│   ├── reviewer.py        # Compliance check & comment insertion
-│   └── checklist.py       # Document checklist verification
-├── outputs/
-│   ├── reviewed_docs/     # Output .docx with comments
-│   ├── reports/           # JSON/Python structured reports
-└── README.md
+adgm-corporate-agent/
+├─ app.py                     # Gradio app
+├─ docx_utils.py              # parse .docx, annotate, save reviewed docx
+├─ rag_index.py               # index ADGM refs & retrieve evidence
+├─ detectors.py               # red-flag checks and rules
+├─ report_schema.py           # JSON schema for output
+├─ requirements.txt
+├─ README.md
+└─ examples/
+   ├─ example_before.docx
+   └─ example_after_reviewed.docx
 ```
 
 ---
@@ -93,10 +89,7 @@ pip install -r requirements.txt
 
 ## 🚀 Usage
 ```bash
-# Run Streamlit app
-streamlit run app.py
 
-# OR run Gradio demo
 python app.py
 ```
 
