@@ -133,10 +133,3 @@ python app.py
 - [Official ADGM Guidance Notes](https://www.adgm.com)
 
 ---
-
-## ✅ Submission Checklist
-- [ ] GitHub repository or zipped codebase  
-- [ ] README with setup instructions  
-- [ ] Example `.docx` before & after review  
-- [ ] Generated JSON/Python report  
-- [ ] Screenshot or demo video  
